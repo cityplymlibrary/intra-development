@@ -1,0 +1,54 @@
+/* main content */
+#container-main {
+	background-position: right top
+}
+
+/* useful link/news */
+#area-news {
+	border: none;
+	margin: 0
+}
+
+#area-news h3 {
+	display: none
+}
+
+.newsitem {
+	padding: 2px 15px;
+	background-color: #e6f0f2;
+	border: solid 2px #b9d8d9;
+	border-radius: 6px;
+	opacity: 1
+}
+
+.newsitem h4 {
+	font-size: 1.6em;
+	margin-bottom: .6em
+}
+
+.newsitem .btn, .newsitem button {
+	margin-bottom: 5px
+}
+
+.newsitem ul li {
+	list-style-type: none
+}
+
+.newsfooter {
+	display: none
+}
+
+#circToggle, #holdsToggle, #overduesToggle,
+#reportsToggle, #cataloguingToggle, #serialsToggle,
+#acquiToggle, #listsToggle, #courseToggle, #toolsToggle,
+#adminToggle, #aboutToggle {
+	display: block;
+	margin: 0
+}
+
+#circCaret, #holdsCaret, #overduesCaret,
+#reportsCaret, #cataloguingCaret, #serialsCaret,
+#acquiCaret, #listsCaret, #courseCaret, #toolsCaret,
+#adminCaret, #aboutCaret {
+	float: right
+}
