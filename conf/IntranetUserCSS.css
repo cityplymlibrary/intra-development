@@ -38,7 +38,7 @@
 	display: none
 }
 
-#circToggle, #holdsToggle, #overduesToggle,
+#circToggle, #holdsToggle, #overdueToggle,
 #reportsToggle, #cataloguingToggle, #serialsToggle,
 #acquiToggle, #listsToggle, #courseToggle, #toolsToggle,
 #adminToggle, #aboutToggle {
@@ -46,7 +46,7 @@
 	margin: 0
 }
 
-#circCaret, #holdsCaret, #overduesCaret,
+#circCaret, #holdsCaret, #overdueCaret,
 #reportsCaret, #cataloguingCaret, #serialsCaret,
 #acquiCaret, #listsCaret, #courseCaret, #toolsCaret,
 #adminCaret, #aboutCaret {

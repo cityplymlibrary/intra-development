@@ -12,6 +12,10 @@ $('#holdsToggle').click(function() {
 	$('#holdsCaret').toggleClass('fa-angle-double-down');
 	$('#holdsCaret').toggleClass('fa-angle-double-left');
 });
+$('#overdueToggle').click(function() {
+	$('#overdueCaret').toggleClass('fa-angle-double-down');
+	$('#overdueCaret').toggleClass('fa-angle-double-left');
+});
 $('#reportsToggle').click(function() {
 	$('#reportsCaret').toggleClass('fa-angle-double-down');
 	$('#reportsCaret').toggleClass('fa-angle-double-left');

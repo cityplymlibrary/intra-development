@@ -33,8 +33,8 @@
 		</li>
 		<li>
 			<form class="d-inline" name="f" action="/cgi-bin/koha/circ/pendingreserves.pl" method="post">
-				<input type="hidden" id="fromPend" name="from" value="01/01/1921" />
-				<input type="hidden" id="toPend" name="to" value="31/12/2031" />
+				<input type="hidden" id="fromPend" name="from" value="" />
+				<input type="hidden" id="toPend" name="to" value="" />
 				<button class="btn btn-default" type="submit" name="run_report" value="Submit">Holds to pull &raquo;</button>
 			</form>
 		</li>
@@ -54,24 +54,38 @@
 	</ul>
 </div>
 <p>
-	<form id="overduesf" class="d-inline" name="f" action="/cgi-bin/koha/circ/overdue.pl" method="post">
-		<input type="hidden" id="fromOver" name="dateduefrom" value="" />
-		<input type="hidden" id="toOver" name="datedueto" value="" />
-		<input type="hidden" id="borname" name="borname" value="" />
-		<input type="hidden" id="borcat" name="borcat" value="" />
-		<input type="hidden" id="borflag" name="borflag" value="" />
-		<input type="hidden" id="patron_attr_filter_CRSCD" name="patron_attr_filter_CRSCD" value="" />
-		<input type="hidden" id="patron_attr_filter_DEPMT" name="patron_attr_filter_DEPMT" value="" />
-		<input type="hidden" id="patron_attr_filter_TUTR" name="patron_attr_filter_TUTR" value="" />
-		<input type="hidden" id="itemtype" name="itemtype" value="" />
-		<input type="hidden" id="homebranch" name="homebranch" value="" />
-		<input type="hidden" id="holdingbranch" name="holdingbranch" value="" />
-		<input type="hidden" id="branch" name="branch" value="" />
-		<input type="hidden" id="showall" name="showall" value="0" />
-		<a id="overduesToggle" class="h3" href="#" onclick="javascript:document.getElementById('overduesf').submit();" role="button" >Overdues <i id="overduesCaret" class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-		<input type="hidden" name="op" value="apply filter">
-	</form>
+	<a id="overdueToggle" class="h3 collapsed" data-toggle="collapse" href="#overdueLinks" role="button" aria-expanded="false" aria-controls="overdueLinks">Overdues <i id="overdueCaret" class="fa fa-angle-double-down" aria-hidden="true"></i></a>
 </p>
+<div class="collapse" id="overdueLinks">
+	<ul>
+		<li>
+			<form id="overduesf" class="d-inline" name="f" action="/cgi-bin/koha/circ/overdue.pl" method="post">
+				<input type="hidden" id="fromOver" name="dateduefrom" value="" />
+				<input type="hidden" id="toOver" name="datedueto" value="" />
+				<input type="hidden" id="borname" name="borname" value="" />
+				<input type="hidden" id="borcat" name="borcat" value="" />
+				<input type="hidden" id="borflag" name="borflag" value="" />
+				<input type="hidden" id="patron_attr_filter_CRSCD" name="patron_attr_filter_CRSCD" value="" />
+				<input type="hidden" id="patron_attr_filter_DEPMT" name="patron_attr_filter_DEPMT" value="" />
+				<input type="hidden" id="patron_attr_filter_TUTR" name="patron_attr_filter_TUTR" value="" />
+				<input type="hidden" id="itemtype" name="itemtype" value="" />
+				<input type="hidden" id="homebranch" name="homebranch" value="" />
+				<input type="hidden" id="holdingbranch" name="holdingbranch" value="" />
+				<input type="hidden" id="branch" name="branch" value="" />
+				<input type="hidden" id="showall" name="showall" value="0" />
+				<button class="btn btn-default" type="submit" name="run_report" value="Submit">Overdues &raquo;</button>
+				<input type="hidden" name="op" value="apply filter">
+			</form>
+		</li>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/reports/guided_reports.pl" method="get">
+				<input type="hidden" name="reports" id="reports" value="73" />
+				<input type="hidden" name="phase" id="phaseHolds" value="Run this report" />
+				<button class="btn btn-default" type="submit" name="" value="Submit">Legacy overdues report &raquo;</button>
+			</form>
+		</li>
+	</ul>
+</div>
 <p>
 	<a id="reportsToggle" class="h3 collapsed" data-toggle="collapse" href="#reportsLinks" role="button" aria-expanded="false" aria-controls="reportsLinks">Reports <i id="reportsCaret" class="fa fa-angle-double-down" aria-hidden="true"></i></a>
 </p>
