@@ -41,7 +41,7 @@
 #circToggle, #holdsToggle, #overdueToggle,
 #reportsToggle, #cataloguingToggle, #serialsToggle,
 #acquiToggle, #listsToggle, #courseToggle, #toolsToggle,
-#adminToggle, #aboutToggle {
+#scoToggle, #adminToggle, #aboutToggle {
 	display: block;
 	margin: 0
 }
@@ -49,6 +49,6 @@
 #circCaret, #holdsCaret, #overdueCaret,
 #reportsCaret, #cataloguingCaret, #serialsCaret,
 #acquiCaret, #listsCaret, #courseCaret, #toolsCaret,
-#adminCaret, #aboutCaret {
+#scoCaret, #adminCaret, #aboutCaret {
 	float: right
 }

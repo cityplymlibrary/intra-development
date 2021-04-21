@@ -8,6 +8,10 @@ $('#circToggle').click(function() {
 	$('#circCaret').toggleClass('fa-angle-double-down');
 	$('#circCaret').toggleClass('fa-angle-double-left');
 });
+$('#overdueToggle').click(function() {
+	$('#overdueCaret').toggleClass('fa-angle-double-down');
+	$('#overdueCaret').toggleClass('fa-angle-double-left');
+});
 $('#holdsToggle').click(function() {
 	$('#holdsCaret').toggleClass('fa-angle-double-down');
 	$('#holdsCaret').toggleClass('fa-angle-double-left');
@@ -43,4 +47,8 @@ $('#courseToggle').click(function() {
 $('#toolsToggle').click(function() {
 	$('#toolsCaret').toggleClass('fa-angle-double-down');
 	$('#toolsCaret').toggleClass('fa-angle-double-left');
+});
+$('#scoToggle').click(function() {
+	$('#scoCaret').toggleClass('fa-angle-double-down');
+	$('#scoCaret').toggleClass('fa-angle-double-left');
 });

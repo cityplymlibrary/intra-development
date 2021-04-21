@@ -9,13 +9,18 @@
 			</form>
 		</li>
 		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/circ/circulation.pl" method="post">
+				<button class="btn btn-default" type="submit" name="" value="Submit">Check out &raquo;</button>
+			</form>
+		</li>
+		<li>
 			<form class="d-inline" name="f" action="/cgi-bin/koha/circ/returns.pl" method="post">
-				<button class="btn btn-default" type="submit" name="" value="Submit">Returns &raquo;</button>
+				<button class="btn btn-default" type="submit" name="" value="Submit">Check in &raquo;</button>
 			</form>
 		</li>
 		<li>
 			<form class="d-inline" name="f" action="/cgi-bin/koha/circ/renew.pl" method="post">
-				<button class="btn btn-default" type="submit" name="" value="Submit">Renewals &raquo;</button>
+				<button class="btn btn-default" type="submit" name="" value="Submit">Renew item &raquo;</button>
 			</form>
 		</li>
 	</ul>
@@ -209,6 +214,16 @@
 			<form class="d-inline" name="f" action="/cgi-bin/koha/course_reserves/course.pl" method="post">
 				<button class="btn btn-default" type="submit" name="" value="Submit">Create course &raquo;</button>
 			</form>
+		</li>
+	</ul>
+</div>
+<p>
+	<a id="scoToggle" class="h3 collapsed" data-toggle="collapse" href="#scoLinks" role="button" aria-expanded="false" aria-controls="scoLinks">Self-service client <i id="scoCaret" class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+</p>
+<div class="collapse" id="scoLinks">
+	<ul>
+		<li>
+			<a class="btn btn-default" href="#" onclick="javascript:window.open('https://ccp.koha-ptfs.co.uk/cgi-bin/koha/sco/sco-main.pl','','width=800,height=500,location=yes,toolbar=no,scrollbars=yes,resize=yes');">Access self-service client &raquo;</a>
 		</li>
 	</ul>
 </div>
