@@ -8,10 +8,6 @@ $('#circToggle').click(function() {
 	$('#circCaret').toggleClass('fa-angle-double-down');
 	$('#circCaret').toggleClass('fa-angle-double-left');
 });
-$('#overdueToggle').click(function() {
-	$('#overdueCaret').toggleClass('fa-angle-double-down');
-	$('#overdueCaret').toggleClass('fa-angle-double-left');
-});
 $('#holdsToggle').click(function() {
 	$('#holdsCaret').toggleClass('fa-angle-double-down');
 	$('#holdsCaret').toggleClass('fa-angle-double-left');
@@ -51,4 +47,9 @@ $('#toolsToggle').click(function() {
 $('#scoToggle').click(function() {
 	$('#scoCaret').toggleClass('fa-angle-double-down');
 	$('#scoCaret').toggleClass('fa-angle-double-left');
+});
+
+// commendations for good patrons
+$('.circ-hlt').each(function() {
+  if($(this).text().indexOf("CDN:") >= 0) $(this).css('color', 'green');
 });
