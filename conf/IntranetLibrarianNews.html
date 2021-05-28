@@ -1,0 +1,267 @@
+<p>
+	<a id="circToggle" class="h3 collapsed" data-toggle="collapse" href="#circLinks" role="button" aria-expanded="false" aria-controls="circLinks">Circulation 
+		<i id="circCaret" class="fa fa-angle-double-down" aria-hidden="true"></i>
+	</a>
+</p>
+<div class="collapse" id="circLinks">
+	<ul>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/members/members-home.pl" method="post">
+				<button class="btn btn-default" type="submit" name="" value="Submit">Patrons &raquo;</button>
+			</form>
+		</li>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/circ/circulation.pl" method="post">
+				<button class="btn btn-default" type="submit" name="" value="Submit">Check out &raquo;</button>
+			</form>
+		</li>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/circ/returns.pl" method="post">
+				<button class="btn btn-default" type="submit" name="" value="Submit">Check in &raquo;</button>
+			</form>
+		</li>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/circ/renew.pl" method="post">
+				<button class="btn btn-default" type="submit" name="" value="Submit">Renew item &raquo;</button>
+			</form>
+		</li>
+	</ul>
+</div>
+<p>
+	<a id="holdsToggle" class="h3 collapsed" data-toggle="collapse" href="#holdsLinks" role="button" aria-expanded="false" aria-controls="holdsLinks">Holds 
+		<i id="holdsCaret" class="fa fa-angle-double-down" aria-hidden="true"></i>
+	</a>
+</p>
+<div class="collapse" id="holdsLinks">
+	<ul>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/circ/view_holdsqueue.pl" method="post">
+				<input type="hidden" name="branchlimit" id="branchlimit" value="" />
+				<button class="btn btn-default" type="submit" name="run_report" value="Submit">Holds queue &raquo;</button>
+			</form>
+		</li>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/circ/pendingreserves.pl" method="post">
+				<input type="hidden" id="fromPend" name="from" value="" />
+				<input type="hidden" id="toPend" name="to" value="" />
+				<button class="btn btn-default" type="submit" name="run_report" value="Submit">Holds to pull &raquo;</button>
+			</form>
+		</li>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/circ/waitingreserves.pl" method="get">
+				<input type="hidden" name="allbranches" id="allbranches" value="1" />
+				<button class="btn btn-default" type="submit" name="" value="Submit">Holds awaiting pickup &raquo;</button>
+			</form>
+		</li>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/reports/guided_reports.pl" method="get">
+				<input type="hidden" name="reports" id="reports" value="179" />
+				<input type="hidden" name="phase" id="phaseHolds" value="Run this report" />
+				<button class="btn btn-default" type="submit" name="" value="Submit">Legacy holds report &raquo;</button>
+			</form>
+		</li>
+	</ul>
+</div>
+<p>
+	<a id="overdueToggle" class="h3 collapsed" data-toggle="collapse" href="#overdueLinks" role="button" aria-expanded="false" aria-controls="overdueLinks">Overdues 
+		<i id="overdueCaret" class="fa fa-angle-double-down" aria-hidden="true"></i>
+	</a>
+</p>
+<div class="collapse" id="overdueLinks">
+	<ul>
+		<li>
+			<form id="overduesf" class="d-inline" name="f" action="/cgi-bin/koha/circ/overdue.pl" method="post">
+				<input type="hidden" id="fromOver" name="dateduefrom" value="" />
+				<input type="hidden" id="toOver" name="datedueto" value="" />
+				<input type="hidden" id="borname" name="borname" value="" />
+				<input type="hidden" id="borcat" name="borcat" value="" />
+				<input type="hidden" id="borflag" name="borflag" value="" />
+				<input type="hidden" id="patron_attr_filter_CRSCD" name="patron_attr_filter_CRSCD" value="" />
+				<input type="hidden" id="patron_attr_filter_DEPMT" name="patron_attr_filter_DEPMT" value="" />
+				<input type="hidden" id="patron_attr_filter_TUTR" name="patron_attr_filter_TUTR" value="" />
+				<input type="hidden" id="itemtype" name="itemtype" value="" />
+				<input type="hidden" id="homebranch" name="homebranch" value="" />
+				<input type="hidden" id="holdingbranch" name="holdingbranch" value="" />
+				<input type="hidden" id="branch" name="branch" value="" />
+				<input type="hidden" id="showall" name="showall" value="0" />
+				<button class="btn btn-default" type="submit" name="run_report" value="Submit">Overdues &raquo;</button>
+				<input type="hidden" name="op" value="apply filter" />
+			</form>
+		</li>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/reports/guided_reports.pl" method="get">
+				<input type="hidden" name="reports" id="reports" value="73" />
+				<input type="hidden" name="phase" id="phaseHolds" value="Run this report" />
+				<button class="btn btn-default" type="submit" name="" value="Submit">Legacy overdues report &raquo;</button>
+			</form>
+		</li>
+	</ul>
+</div>
+<p>
+	<a id="reportsToggle" class="h3 collapsed" data-toggle="collapse" href="#reportsLinks" role="button" aria-expanded="false" aria-controls="reportsLinks">Reports 
+		<i id="reportsCaret" class="fa fa-angle-double-down" aria-hidden="true"></i>
+	</a>
+</p>
+<div class="collapse" id="reportsLinks">
+	<ul>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/reports/guided_reports.pl" method="get">
+				<input type="hidden" id="phaseSvd" name="phase" value="Use saved" />
+				<button class="btn btn-default" type="submit" name="" value="submit">All saved reports &raquo;</button>
+			</form>
+		</li>
+		<li>
+			<a class="btn btn-default" href="#" onclick="javascript:window.open('https://cityplymacuk.sharepoint.com/sites/LibrarySharedArea_Group/SitePages/Useful%20Koha%20Reports.aspx','','width=800,height=500,location=yes,toolbar=no,scrollbars=yes,resize=yes');">Useful reports &raquo;</a>
+		</li>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/reports/guided_reports.pl" method="get">
+				<input type="hidden" id="phaseWiz" name="phase" value="Build new" />
+				<button class="btn btn-default" type="submit" name="" value="submit">Report wizard &raquo;</button>
+			</form>
+		</li>
+	</ul>
+</div>
+<p>
+	<a id="cataloguingToggle" class="h3 collapsed" data-toggle="collapse" href="#cataloguingLinks" role="button" aria-expanded="false" aria-controls="cataloguingLinks">Cataloguing 
+		<i id="cataloguingCaret" class="fa fa-angle-double-down" aria-hidden="true"></i>
+	</a>
+</p>
+<div class="collapse" id="cataloguingLinks">
+	<ul>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/catalogue/search.pl" method="post">
+				<button class="btn btn-default" type="submit" name="" value="Submit">Advanced search &raquo;</button>
+			</form>
+		</li>
+		<li>
+			<a class="btn btn-default" href="#" onclick="javascript:window.open('/cgi-bin/koha/cataloguing/z3950_search.pl?biblionumber=&amp;frameworkcode=BK','','width=800,height=500,location=yes,toolbar=no,scrollbars=yes,resize=yes');">Fast catalogue book &raquo;</a>
+		</li>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/cataloguing/addbiblio.pl" method="post">
+				<input type="hidden" id="frameworkcode" name="frameworkcode" value="EQU" />
+				<button class="btn btn-default" type="submit" name="" value="Submit">Fast catalogue equipment &raquo;</button>
+			</form>
+		</li>
+		<li>
+			<a class="btn btn-default" href="#" onclick="javascript:window.open('https://discover.libraryhub.jisc.ac.uk/','','width=800,height=500,location=yes,toolbar=no,scrollbars=yes,resize=yes');">JISC Discover tools &raquo;</a>
+		</li>
+	</ul>
+</div>
+<p>
+	<a id="serialsToggle" class="h3 collapsed" data-toggle="collapse" href="#serialsLinks" role="button" aria-expanded="false" aria-controls="serialsLinks">Serials 
+		<i id="serialsCaret" class="fa fa-angle-double-down" aria-hidden="true"></i>
+	</a>
+</p>
+<div class="collapse" id="serialsLinks">
+	<ul>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/serials/serials-home.pl" method="post">
+				<button class="btn btn-default" type="submit" name="" value="Submit">View serials &raquo;</button>
+			</form>
+		</li>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/serials/checkexpiration.pl" method="post">
+				<button class="btn btn-default" type="submit" name="" value="Submit">Check expiaries &raquo;</button>
+			</form>
+		</li>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/serials/subscription-frequencies.pl" method="post">
+				<button class="btn btn-default" type="submit" name="" value="Submit">Manage frequencies &raquo;</button>
+			</form>
+		</li>
+	</ul>
+</div>
+<p>
+	<a id="acquiToggle" class="h3 collapsed" data-toggle="collapse" href="#acquiLinks" role="button" aria-expanded="false" aria-controls="acquiLinks">Acquisitions 
+		<i id="acquiCaret" class="fa fa-angle-double-down" aria-hidden="true"></i>
+	</a>
+</p>
+<div class="collapse" id="acquiLinks">
+	<ul>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/acqui/booksellers.pl" method="post">
+				<button class="btn btn-default" type="submit" name="" value="Submit">Vendors &amp; baskets &raquo;</button>
+			</form>
+		</li>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/acqui/invoices.pl" method="post">
+				<button class="btn btn-default" type="submit" name="" value="Submit">Invoices &raquo;</button>
+			</form>
+		</li>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/admin/aqbudgets.pl" method="post">
+				<button class="btn btn-default" type="submit" name="" value="Submit">Budgets &amp; funds &raquo;</button>
+			</form>
+		</li>
+	</ul>
+</div>
+<p>
+	<a id="listsToggle" class="h3 collapsed" data-toggle="collapse" href="#listsLinks" role="button" aria-expanded="false" aria-controls="listsLinks">Lists 
+		<i id="listsCaret" class="fa fa-angle-double-down" aria-hidden="true"></i>
+	</a>
+</p>
+<div class="collapse" id="listsLinks">
+	<ul>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/virtualshelves/shelves.pl" method="post">
+				<button class="btn btn-default" type="submit" name="" value="Submit">View lists &raquo;</button>
+			</form>
+		</li>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/virtualshelves/shelves.pl" method="post">
+				<input type="hidden" id="op" name="op" value="add_form" />
+				<input type="hidden" id="referer" name="referer" value="list" />
+				<button class="btn btn-default" type="submit" name="" value="submit">Create list &raquo;</button>
+			</form>
+		</li>
+	</ul>
+</div>
+<p>
+	<a id="courseToggle" class="h3 collapsed" data-toggle="collapse" href="#courseLinks" role="button" aria-expanded="false" aria-controls="courseLinks">Course reserves 
+		<i id="courseCaret" class="fa fa-angle-double-down" aria-hidden="true"></i>
+	</a>
+</p>
+<div class="collapse" id="courseLinks">
+	<ul>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/course_reserves/course-reserves.pl" method="post">
+				<button class="btn btn-default" type="submit" name="" value="Submit">View courses &raquo;</button>
+			</form>
+		</li>
+		<li>
+			<form class="d-inline" name="f" action="/cgi-bin/koha/course_reserves/course.pl" method="post">
+				<button class="btn btn-default" type="submit" name="" value="Submit">Create course &raquo;</button>
+			</form>
+		</li>
+	</ul>
+</div>
+<p>
+	<a id="scoToggle" class="h3 collapsed" data-toggle="collapse" href="#scoLinks" role="button" aria-expanded="false" aria-controls="scoLinks">Self-service client 
+		<i id="scoCaret" class="fa fa-angle-double-down" aria-hidden="true"></i>
+	</a>
+</p>
+<div class="collapse" id="scoLinks">
+	<ul>
+		<li>
+			<a class="btn btn-default" href="#" onclick="javascript:window.open('https://ccp.koha-ptfs.co.uk/cgi-bin/koha/sco/sco-main.pl','SCO_CLIENT','width=800,height=500,location=yes,toolbar=no,scrollbars=yes,resize=yes');">Access self-checkout client &raquo;</a>
+		</li>
+		<li>
+			<a class="btn btn-default" href="#" onclick="javascript:window.open('https://ccp.koha-ptfs.co.uk/cgi-bin/koha/sci/sci-main.pl','SCI_CLIENT','width=800,height=500,location=yes,toolbar=no,scrollbars=yes,resize=yes');">Access self-checkin client &raquo;</a>
+		</li>
+	</ul>
+</div>
+<p>
+	<a id="toolsToggle" class="h3" href="#" onclick="javascript:window.location='/cgi-bin/koha/tools/tools-home.pl';" role="button">Tools 
+		<i id="toolsCaret" class="fa fa-angle-double-right" aria-hidden="true"></i>
+	</a>
+</p>
+<p>
+	<a id="adminToggle" class="h3" href="#" onclick="javascript:window.location='/cgi-bin/koha/admin/admin-home.pl';" role="button">Administration 
+		<i id="adminCaret" class="fa fa-angle-double-right" aria-hidden="true"></i>
+	</a>
+</p>
+<p>
+	<a id="aboutToggle" class="h3" href="#" onclick="javascript:window.location='/cgi-bin/koha/about.pl';" role="button">About Koha &amp; Server Status 
+		<i id="aboutCaret" class="fa fa-angle-double-right" aria-hidden="true"></i>
+	</a>
+</p>

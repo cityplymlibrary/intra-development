@@ -40,10 +40,6 @@ $('#courseToggle').click(function() {
 	$('#courseCaret').toggleClass('fa-angle-double-down');
 	$('#courseCaret').toggleClass('fa-angle-double-left');
 });
-$('#toolsToggle').click(function() {
-	$('#toolsCaret').toggleClass('fa-angle-double-down');
-	$('#toolsCaret').toggleClass('fa-angle-double-left');
-});
 $('#scoToggle').click(function() {
 	$('#scoCaret').toggleClass('fa-angle-double-down');
 	$('#scoCaret').toggleClass('fa-angle-double-left');
