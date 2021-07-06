@@ -38,17 +38,19 @@
 	display: none
 }
 
-#circToggle, #holdsToggle, #overdueToggle,
-#reportsToggle, #cataloguingToggle, #serialsToggle,
-#acquiToggle, #listsToggle, #courseToggle, #toolsToggle,
-#scoToggle, #adminToggle, #aboutToggle {
+#opacToggle, #circToggle, #holdsToggle,
+#overdueToggle, #reportsToggle, #cataloguingToggle,
+#serialsToggle, #acquiToggle, #listsToggle,
+#courseToggle, #toolsToggle, #scoToggle,
+#adminToggle, #aboutToggle {
 	display: block;
 	margin: 0
 }
 
-#circCaret, #holdsCaret, #overdueCaret,
-#reportsCaret, #cataloguingCaret, #serialsCaret,
-#acquiCaret, #listsCaret, #courseCaret, #toolsCaret,
-#scoCaret, #adminCaret, #aboutCaret {
+#opacCaret, #circCaret, #holdsCaret,
+#overdueCaret, #reportsCaret, #cataloguingCaret,
+#serialsCaret, #acquiCaret, #listsCaret,
+#courseCaret, #toolsCaret, #scoCaret,
+#adminCaret, #aboutCaret {
 	float: right
 }
